@@ -15,5 +15,3 @@ CREATE TABLE Subjects(
     SoTinChi INT CHECK (SoTinChi > 0) 
 );
 
-SELECT * FROM Student;
-SELECT * FROM Subjects;
