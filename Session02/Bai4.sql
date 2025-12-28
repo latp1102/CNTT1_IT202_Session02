@@ -1,0 +1,27 @@
+CREATE DATABASE Mon_hoc;
+USE Mon_hoc;
+DROP TABLE IF EXISTS Enrollment;
+DROP TABLE IF EXISTS Subjects;
+DROP TABLE IF EXISTS Students;
+CREATE TABLE Students(
+	MaSV INT PRIMARY KEY,
+    HoTen NVARCHAR(100) NOT NULL,
+    NgaySinh DATE
+);
+
+CREATE TABLE Subjects(
+	MaMH INT PRIMARY KEY,
+    TenMH NVARCHAR(100) NOT NULL,
+    SoTinChi INT
+);
+
+CREATE TABLE Enrollment(
+	MaSV INT,
+    MaMH INT,
+    NgayDangKy DATE,
+    PRIMARY KEY(MaSV, MaMH),
+    FOREIGN KEY(MaSV) REFERENCES Students(MaSV),
+    FOREIGN KEY(MaMH) REFERENCES Subjects(MaMH)
+);
+
+SELECT * FROM Enrollment;

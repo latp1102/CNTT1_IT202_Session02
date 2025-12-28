@@ -1,0 +1,21 @@
+CREATE DATABASE Lop_hoc;
+USE Lop_hoc;
+
+DROP TABLE IF EXISTS Student;
+DROP TABLE IF EXISTS Class;
+CREATE TABLE Class(
+	MaLop INT PRIMARY KEY,
+    TenLop VARCHAR(50) NOT NULL,
+    NamHoc INT
+);
+
+CREATE TABLE Student(
+	MaSV INT PRIMARY KEY,
+    HoTen VARCHAR(100) NOT NULL,
+    NgaySinh DATE,
+    MaLopHoc INT,
+    FOREIGN KEY(MaLopHoc) REFERENCES Class(MaLop)
+);
+
+SELECT * FROM Class;
+SELECT * FROM Student;

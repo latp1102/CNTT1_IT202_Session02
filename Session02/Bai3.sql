@@ -1,0 +1,19 @@
+CREATE DATABASE IF NOT EXISTS Lop_hoc;
+USE Lop_hoc;
+
+DROP TABLE IF EXISTS Student;
+DROP TABLE IF EXISTS Subjects;
+
+CREATE TABLE Student(
+    MaSV INT PRIMARY KEY,
+    HoTen VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE Subjects(
+    MaMonHoc INT PRIMARY KEY,
+    TenMonHoc VARCHAR(100) NOT NULL,
+    SoTinChi INT CHECK (SoTinChi > 0) 
+);
+
+SELECT * FROM Student;
+SELECT * FROM Subjects;
