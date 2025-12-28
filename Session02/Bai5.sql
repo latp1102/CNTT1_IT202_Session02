@@ -23,5 +23,3 @@ ALTER TABLE Subjects
 ADD CONSTRAINT FK_Subjects_Teacher
 FOREIGN KEY (MaGV)
 REFERENCES Teacher(MaGV);
-
-SELECT * FROM Teacher;
