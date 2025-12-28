@@ -26,5 +26,3 @@ CREATE TABLE Score(
     CHECK (DiemQuaTrinh >= 0 AND DiemQuaTrinh <= 10),
     CHECK (DiemCuoiKy >= 0 AND DiemCuoiKy <= 10)
 );
-
-SELECT * FROM Score;
