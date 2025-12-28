@@ -24,4 +24,4 @@ CREATE TABLE Enrollment(
     FOREIGN KEY(MaMH) REFERENCES Subjects(MaMH)
 );
 
-SELECT * FROM Enrollment;
+
