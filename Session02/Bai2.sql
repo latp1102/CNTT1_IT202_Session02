@@ -17,5 +17,3 @@ CREATE TABLE Student(
     FOREIGN KEY(MaLopHoc) REFERENCES Class(MaLop)
 );
 
-SELECT * FROM Class;
-SELECT * FROM Student;
